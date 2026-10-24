@@ -1,0 +1,10 @@
+{
+  "name": "inference-response-inspector",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests.mjs"
+  },
+  "description": "Inspect a model response, observed request latency and token usage through a separately configured backend.",
+  "license": "MIT"
+}

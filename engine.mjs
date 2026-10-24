@@ -1,0 +1,4 @@
+
+export const sample='Explain the fixture response.';
+export function quantile(values,p){if(!values.length)throw Error('No measurements');const a=[...values].sort((a,b)=>a-b);return a[Math.max(0,Math.ceil(p*a.length)-1)]}
+export function analyze(text){if(!text.trim())throw Error('Add a synthetic prompt.');return{metrics:[['Endpoint','/api/mock'],['Fixture model calls',0],['Benchmark','Not run']],rows:[{title:'Fixture design',status:'READY',evidence:'POST /api/mock with mode=slow or fast',detail:'The slow path waits 160 ms; the fast path returns the same fixture response immediately. The intentional delay models integration overhead, not inference.'}],summary:'Click Run measured benchmark below. Results are actual HTTP wall-clock measurements from this browser. Network, cold starts and platform variability affect results; this is not a Novita model benchmark.'}}

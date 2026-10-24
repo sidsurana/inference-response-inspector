@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {analyze,sample} from './engine.mjs';
+import {quantile} from './engine.mjs';test('nearest-rank quantiles are correct',()=>{assert.equal(quantile([4,1,3,2],.5),2);assert.equal(quantile([4,1,3,2],.95),4)});test('empty measurement set rejected',()=>assert.throws(()=>quantile([],.95)));
